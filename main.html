@@ -19,13 +19,22 @@
        <label> Registro todo aberto <input type="checkbox" class="select" id="all-open"></label>   
     </div>
 
-    <div class="container-time">
-        <span id="time">00:00</span>
+    <div id="container-time">
+       
+            <span id="minuteLeft">1</span>
+            <span id="minuteRight">5</span>
+       
+        <span>:</span>
+        
+            <span id="secondLeft">0</span>
+            <span id="secondRight">0</span>
+        
     </div>
 
-    <button type="button">Começar</button>
+    <button type="button" id="buttonStart" onclick="start()">Começar</button>
 
     <footer>Desenvolvido por Luis Fernando, 2021</footer>
-
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
