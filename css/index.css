@@ -19,7 +19,6 @@ body{
 	background: rgb(252, 243, 231);
 	color: #000;
 	border: 0;
-	border-radius: 5px 0px 0px 5px;
 	padding: 1rem;
 	width: 20rem;
 	text-align: center;
@@ -30,7 +29,6 @@ body{
 	color: #000;
 	font-size: 1rem;
 	padding: 1rem;
-	border-radius: 0px 5px 5px 0px;
 	cursor: pointer;
 }
 
