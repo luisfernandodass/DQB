@@ -5,30 +5,30 @@
   
     <!-- Position Column -->
     <ng-container matColumnDef="high">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <th mat-header-cell *matHeaderCellDef> Máximo </th>
       <td mat-cell *matCellDef="let element"> {{element.high}} </td>
     </ng-container>
   
     <!-- Name Column -->
     <ng-container matColumnDef="low">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <th mat-header-cell *matHeaderCellDef> Mínimo </th>
       <td mat-cell *matCellDef="let element"> {{element.low}} </td>
     </ng-container>
   
     <!-- Weight Column -->
     <ng-container matColumnDef="bid">
-      <th mat-header-cell *matHeaderCellDef> bid </th>
+      <th mat-header-cell *matHeaderCellDef> Compra </th>
       <td mat-cell *matCellDef="let element"> {{element.bid}} </td>
     </ng-container>
   
     <!-- Symbol Column -->
     <ng-container matColumnDef="varBid">
-      <th mat-header-cell *matHeaderCellDef> varBid </th>
+      <th mat-header-cell *matHeaderCellDef> Variação </th>
       <td mat-cell *matCellDef="let element"> {{element.varBid}} </td>
     </ng-container>
 
     <ng-container matColumnDef="pctChange">
-        <th mat-header-cell *matHeaderCellDef> pctChange </th>
+        <th mat-header-cell *matHeaderCellDef> Porcentagem de variação </th>
         <td mat-cell *matCellDef="let element"> {{element.pctChange}} </td>
       </ng-container>
   
