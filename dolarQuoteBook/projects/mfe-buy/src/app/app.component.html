@@ -1,20 +1,39 @@
-<section>
-    <table>
-        <thead>
-            <th>Máximo</th> <!--high-->
-            <th>Mínimo</th> <!--low-->
-            <th>Compra</th> <!--bid-->
-            <th>Variação</th> <!--varBid-->
-            <th>Porcentagem de Variação</th> <!--pctChange-->
-        </thead>
-        <tbody>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-        </tbody>
-    </table>
-</section>
+<table mat-table [dataSource]="source" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="high">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.high}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="low">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.low}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="bid">
+      <th mat-header-cell *matHeaderCellDef> bid </th>
+      <td mat-cell *matCellDef="let element"> {{element.bid}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="varBid">
+      <th mat-header-cell *matHeaderCellDef> varBid </th>
+      <td mat-cell *matCellDef="let element"> {{element.varBid}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pctChange">
+        <th mat-header-cell *matHeaderCellDef> pctChange </th>
+        <td mat-cell *matCellDef="let element"> {{element.pctChange}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
