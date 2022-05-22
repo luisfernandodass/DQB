@@ -5,10 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --prod --project mfe-buy --single-bundle --output-hashing none",
-    "test": "ng test",
-    "build:mfe-buy": "ng build --prod --project mfe-buy --single-bundle --output-hashing none",
-    "build:mfe-sell": "ng build --prod --project mfe-sell --single-bundle --output-hashing none"
+    "watch": "ng build --watch --prod --single-bundle --output-hashing none",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {

@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { QuotationBook } from 'src/app/models/quotation-book';
+import { Component, OnInit } from '@angular/core';
+import { QuotationBook } from '../models/quotation-book';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-sell',
+  templateUrl: './sell.component.html',
+  styleUrls: ['./sell.component.scss']
 })
-export class AppComponent {
-  title = 'mfe-buy';
+export class SellComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   source: QuotationBook[] = [
     { high: '00:00', low: '00:00', bid: '00:00', varBid: '00:00', pctChange: '00:00' },
@@ -17,4 +21,5 @@ export class AppComponent {
     { high: '00:00', low: '00:00', bid: '00:00', varBid: '00:00', pctChange: '00:00' },
    ];
   displayedColumns: string[] = ['high', 'low', 'bid', 'varBid', 'pctChange'];
+
 }
