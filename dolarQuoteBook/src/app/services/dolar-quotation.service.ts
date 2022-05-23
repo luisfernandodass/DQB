@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { webSocket } from 'rxjs/webSocket';
+import { HttpClient } from '@angular/common/http';
+import { QuotationBook } from '../models/quotation-book';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DolarQuotationService {
 
-  url = 'https://economia.awesomeapi.com.br/last/USD-BRL';
+  constructor(public http: HttpClient) { }
 
-  constructor() { }
+  // get(){ 
+  //   return this.http.get<QuotationBook>('https://economia.awesomeapi.com.br/last/USD-BRL')
+  //   .subscribe(quotationBook => {
+  //     this.x = quotationBook.
+  //   })
+  // }
 
-
-  get(){
-    return of(this.url);
+  get(): Observable<QuotationBook> {
+    return this.http
+      .get<QuotationBook>('https://economia.awesomeapi.com.br/last/USD-BRL')
   }
   
   // url.subscribe({
