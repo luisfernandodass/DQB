@@ -12,13 +12,22 @@ body {
     background-color: #1E222D;
 }
 
-th {
-    padding: 0rem 1rem!important;
-    font-family: 'Roboto', sans-serif;
-}
+table {
+    width: 100%;
+    border-spacing: 0;
 
-td {
-    padding-left: 0rem!important;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+    th, td {
+        color: #fff;
+        border: 1px solid #fff;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    td {
+        padding: 1rem 0;
+    }
+   
+    th {
+        padding: 1rem 0!important;
+    }
 }
